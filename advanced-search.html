@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indeed Job Search</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div id="navigation"></div>
+
+    <hr style="width: 90%; margin: 15px auto" />
+    <section class="main-section">
+      <div class="filter-container">
+        <div class="filters">
+          <h3>Filters</h3>
+          <div class="distance">
+            <label for="select-distance" class="label-style">Distance</label>
+            <select id="select-distance">
+              <option value="within-10-miles">Within 10 miles</option>
+              <option value="within-20-miles">Within 20 miles</option>
+              <option value="within-25-miles">Within 25 miles</option>
+              <option value="within-30-miles">Within 30 miles</option>
+              <option value="within-50-miles">Within 50 miles</option>
+            </select>
+          </div>
+          <div class="last-updated">
+            <label for="select-last-updated" class="label-style"
+              >Last updated</label
+            >
+            <select id="select-last-updated">
+              <option value="within-last3-days">Within last 3 days</option>
+              <option value="within-last-week">Within last week</option>
+              <option value="within-last-month">Within last month</option>
+              <option value="within-last3-months">Within last 3 months</option>
+              <option value="show all">Show all</option>
+            </select>
+          </div>
+          <div class="previously-viewed">
+            <label for="Hide-previously-viewed" class="label-style"
+              >Hide previously viewed</label
+            >
+            <input
+              type="checkbox"
+              id="previously-viewed"
+              name="hide-previously-viewed"
+              value="checkboxValue"
+            />
+          </div>
+
+          <div class="job-title">
+            <p class="label-style">Job title</p>
+            <div class="checkbox-style">
+              <label for="uxdesigner">UX designer</label>
+              <input
+                type="checkbox"
+                id="ux-designer"
+                name="job-title"
+                value="ux-designer"
+              />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="uxui-designer">UX/UI Designer</label>
+              <input
+                type="checkbox"
+                id="uxui-designer"
+                name="job-title"
+                value="uxui-designer"
+              />
+            </div>
+            <div class="checkbox-style">
+              <label for="product-designer">Product Designer</label>
+              <input
+                type="checkbox"
+                id="product-designer"
+                name="job-title"
+                value="product-designer"
+              />
+            </div>
+            <div class="checkbox-style">
+              <label for="ui-designer">UI Designer</label>
+              <input
+                type="checkbox"
+                id="ui-designer"
+                name="job-title"
+                value="ui-designer"
+              />
+            </div>
+            <div class="checkbox-style">
+              <label for="graphic-designer">Graphic Designer</label>
+              <input
+                type="checkbox"
+                id="graphic-designer"
+                name="job-title"
+                value="graphic-designer"
+              />
+            </div>
+          </div>
+          <div class="years-of-experience">
+            <p class="label-style">Years of experience</p>
+            <div class="checkbox-style">
+              <label for="0-1-year">0-1 year</label>
+              <input
+                type="checkbox"
+                id="0-1year"
+                name="years-of-experience"
+                class="years-of-exp"
+                value="0-1-year"
+              />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="2-3-year">2-3 years</label>
+              <input
+                type="checkbox"
+                id="2-3year"
+                name="years-of-experience"
+                value="2-3-year"
+                class="years-of-exp"
+              />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="3-4-year">3-4 years</label>
+              <input
+                type="checkbox"
+                id="3-4year"
+                name="years-of-experience"
+                value="3-4-year"
+                class="years-of-exp"
+              />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="5+year">5+ years</label>
+              <input
+                type="checkbox"
+                id="5+year"
+                name="years-of-experience"
+                value="5+year"
+                class="years-of-exp"
+              />
+            </div>
+          </div>
+
+          <div class="skills">
+            <label for="skills" class="label-style">Skills</label>
+            <input type="text" id="skillset" name="skills" />
+          </div>
+
+          <div class="company">
+            <p class="label-style">Company</p>
+            <div class="checkbox-style">
+              <label for="Tcs">TCS</label>
+              <input type="checkbox" id="TCS" name="comapny" value="tcs" />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="wipro">Wipro</label>
+              <input type="checkbox" id="wipro" name="comapny" value="wipro" />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="accenture">Accenture</label>
+              <input
+                type="checkbox"
+                id="accenture"
+                name="comapny"
+                value="accenture"
+              />
+            </div>
+
+            <div class="checkbox-style">
+              <label for="cognizant">Cognizant</label>
+              <input
+                type="checkbox"
+                id="cognizant"
+                name="comapny"
+                value="cognizant"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="candidates-list-container">
+          <div class="top-details">
+            <span class="resume-count"> 14 resume </span>
+            <span class="save-search">
+              <a href="save-search">Save this search</a>
+            </span>
+          </div>
+          <div id="card-container"></div>
+          <!-- <div class="card">
+              <div class="candidate-details">
+                <span class="candidate-name">Karthik Kumar</span>
+                <span class="candidate-location">Bengaluru, KA</span>
+                <a class="view-resume" href="#">View resume</a>
+              </div>
+              <span class="experience-year">Experience (3)</span>
+              <div class="experience-designations">
+                <p>UI/UX designer <span class="place">at LTMindtree</span></p>
+                <p>UI/UX designer <span class="place">at LTMindtree</span></p>
+                <p>UI/UX designer <span class="place">at LTMindtree</span></p>
+                <p>UI/UX designer <span class="place">at LTMindtree</span></p>
+                <p>UI/UX designer <span class="place">at LTMindtree</span></p>
+              </div>
+              <div class="tags-group">
+                <div class="update">Updated 2 days ago</div>
+                <div class="status">Ready to work</div>
+              </div>
+            </div>  -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

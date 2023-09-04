@@ -1,0 +1,64 @@
+<header>
+  <div class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="container">
+    <nav class="main-nav">
+      <a href="/" class="logo">
+        <img src="./assets/logo.jpeg" alt="logo" class="logo__img" />
+      </a>
+
+      <ul class="main-menu">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Post a job</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link active">Find CVs</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Dashboard</a>
+        </li>
+        <li class="nav__item right-align">
+          <a href="#" class="nav__link">Help</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<form action="advanced-search.html" method="GET">
+  <div class="search-container">
+    <img src="./assets/Img.png" alt="" class="cv-img" />
+    <div class="job">
+      <label class="font-bold">What</label>
+      <input
+        type="text"
+        id="jobTitle"
+        name="jobTitle"
+        class="form-field"
+        placeholder="Job title, skills"
+        required
+      />
+    </div>
+    <div class="location">
+      <label class="font-bold">Where</label>
+      <input
+        type="text"
+        name="location"
+        id="location"
+        class="form-field"
+        placeholder="City or postcode"
+        required
+      />
+    </div>
+    <div class="find-resume">
+      <button class="btn btn-primary" id="resume-find" type="submit">
+        Find Resume
+      </button>
+      <a href="#" class="advanced-search">Advanced Search</a>
+    </div>
+  </div>
+</form>
